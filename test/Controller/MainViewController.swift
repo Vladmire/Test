@@ -19,13 +19,13 @@ class MainViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
         view.addSubview(dataTableView)
         
-        dataTableView.separatorColor = .red
-        dataTableView.separatorStyle = .singleLine
         dataTableView.edgesToSuperview()
         
+        
+        dataTableView.dataSource = self
+        dataTableView.register(UITableViewCell.self, forCellReuseIdentifier: "dataCell")
     }
     
     
