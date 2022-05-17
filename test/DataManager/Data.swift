@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
 struct Data {
-    let image: String?
-    let title: String?
-    let text: String?
+    let imageName: String
+    let title: String
+    let text: String
 }
