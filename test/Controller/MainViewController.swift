@@ -7,20 +7,23 @@
 
 import TinyConstraints
 
-class MainViewController: UIViewController, UITableViewDataSource {
+class MainViewController: UIViewController, UITableViewDataSource{
 
     
     private let cellID = "customCell"
     private let data = DataAPI.getData()
     private let dataTableView = UITableView()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(dataTableView)
+        //navigationController?.navigationItem.title = "main menu" ---- check it later
+        
         
         dataTableView.edgesToSuperview()
+        dataTableView.delegate = self
         dataTableView.dataSource = self
+        
         dataTableView.register(CustomTableViewCell.self, forCellReuseIdentifier: cellID)
     }
     
@@ -35,6 +38,14 @@ class MainViewController: UIViewController, UITableViewDataSource {
     }
     
     
+}
+
+extension MainViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailedVc = DetailedViewController(currentData: data[indexPath.row])
+//        /show(detailedVc, animated: true, completion: nil)
+        show(detailedVc, sender: self)
+    }
     
 }

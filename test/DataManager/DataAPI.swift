@@ -11,10 +11,10 @@ class DataAPI {
     
     static func getData() -> [Data] {
         let data: [Data] = [
-            Data(imageName: "circle", title: "ab", text: "ab"),
-            Data(imageName: "circle", title: "ab", text: "ab"),
-            Data(imageName: "circle", title: "ab", text: "ab"),
-            Data(imageName: "circle", title: "ab", text: "ab")
+            Data(imageName: "circle", title: "title", text: "text"),
+            Data(imageName: "circle", title: "title", text: "text"),
+            Data(imageName: "circle", title: "title", text: "text"),
+            Data(imageName: "circle", title: "title", text: "text")
         ]
         return data
     }

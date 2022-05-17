@@ -40,12 +40,11 @@ class CustomTableViewCell: UITableViewCell {
         image.width(60)
         arrowButton.height(40)
         arrowButton.width(40)
-        
         [image, titleLabel, arrowButton].forEach { stackView.addArrangedSubview($0) }
         stackView.height(80)
         
         contentView.addSubview(stackView)
-        stackView.edgesToSuperview(insets: .top(10) + .left(10) + .bottom(10) + .right(10))
+        stackView.edgesToSuperview(insets: .top(10) + .left(20) + .bottom(10) + .right(30))
     }
     
     required init?(coder: NSCoder) {
@@ -56,6 +55,5 @@ class CustomTableViewCell: UITableViewCell {
         image.image = UIImage(named: data.imageName)
         titleLabel.text = data.title
     }
-    
     
 }
