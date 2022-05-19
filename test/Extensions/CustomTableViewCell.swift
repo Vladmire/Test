@@ -9,26 +9,9 @@ import TinyConstraints
 
 class CustomTableViewCell: UITableViewCell {
     
-    let image: UIImageView = {
-        let img = UIImageView()
-        img.clipsToBounds = true
-        img.contentMode = .scaleToFill
-        return img
-    }()
-    let titleLabel :UILabel = {
-        let ttl = UILabel()
-        ttl.textColor = .black
-        ttl.numberOfLines = 0
-        ttl.font = UIFont.boldSystemFont(ofSize: 21)
-        return ttl
-    }()
-    let arrowButton: UIButton = {
-        let btn = UIButton()
-        btn.setTitle("button", for: .normal)
-        btn.setImage(UIImage(named: "arrow-right"), for: .normal)
-        btn.contentMode = .scaleAspectFill
-        return btn
-    }()
+    let image = ViewsFactory.createImageView(cornerRadius: 0)
+    let titleLabel = ViewsFactory.createLabel(fontSize: 25)
+    let arrow =  ViewsFactory.createImageView(imageName: "arrow-right", cornerRadius: 0)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
      super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -38,10 +21,9 @@ class CustomTableViewCell: UITableViewCell {
         stackView.spacing = 20
         image.height(60)
         image.width(60)
-        arrowButton.height(40)
-        arrowButton.width(40)
-        [image, titleLabel, arrowButton].forEach { stackView.addArrangedSubview($0) }
-        stackView.height(80)
+        arrow.height(40)
+        arrow.width(40)
+        [image, titleLabel, arrow].forEach { stackView.addArrangedSubview($0) }
         
         contentView.addSubview(stackView)
         stackView.edgesToSuperview(insets: .top(10) + .left(20) + .bottom(10) + .right(30))
@@ -52,7 +34,7 @@ class CustomTableViewCell: UITableViewCell {
     }
     
     func update(data: Data) {
-        image.image = UIImage(named: data.imageName)
+        image.image = UIImage(named: String(data.imageName))
         titleLabel.text = data.title
     }
     
