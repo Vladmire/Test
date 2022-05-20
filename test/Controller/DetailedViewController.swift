@@ -13,7 +13,7 @@ class DetailedViewController: UIViewController {
     
     private lazy var detailedView: DetailedView = {
         let view = DetailedView()
-        view.image.image = UIImage(named: String(currentData.imageName))
+        view.image.image = UIImage(named: String(currentData.image))
         view.text.text = currentData.text
         view.title.text = currentData.title
         return view

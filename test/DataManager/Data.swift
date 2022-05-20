@@ -8,14 +8,8 @@
 import UIKit
 
 struct Data: Decodable {
-    let userId: Int
-    let imageName: Int
+    let image: String
     let title: String
     let text: String
-    
-    enum CodingKeys: String, CodingKey {
-        case imageName = "id"
-        case text = "body"
-        case userId, title
-    }
+
 }

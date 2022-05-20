@@ -34,7 +34,7 @@ class CustomTableViewCell: UITableViewCell {
     }
     
     func update(data: Data) {
-        image.image = UIImage(named: String(data.imageName))
+        image.image = UIImage(named: String(data.image))
         titleLabel.text = data.title
     }
     

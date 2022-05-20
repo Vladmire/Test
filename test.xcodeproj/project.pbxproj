@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		25C978FE9F900D2DD16D6989 /* Pods_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CA93B42808F39E68D317BB /* Pods_test.framework */; };
+		69179A112837DB5A0028788D /* file.txt in Resources */ = {isa = PBXBuildFile; fileRef = 69179A102837DB5A0028788D /* file.txt */; };
 		6926B99F2833C71B005CE19F /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926B99E2833C71B005CE19F /* DetailedViewController.swift */; };
 		6926B9A12834D29B005CE19F /* DetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926B9A02834D29B005CE19F /* DetailedView.swift */; };
 		6926B9A428350273005CE19F /* ViewsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926B9A328350273005CE19F /* ViewsFactory.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69179A102837DB5A0028788D /* file.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = file.txt; sourceTree = "<group>"; };
 		6926B99E2833C71B005CE19F /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 		6926B9A02834D29B005CE19F /* DetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedView.swift; sourceTree = "<group>"; };
 		6926B9A328350273005CE19F /* ViewsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsFactory.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		692F1845282D4846000EDEA8 = {
 			isa = PBXGroup;
 			children = (
+				69179A102837DB5A0028788D /* file.txt */,
 				692F1850282D4846000EDEA8 /* test */,
 				692F184F282D4846000EDEA8 /* Products */,
 				2F5B1BBD413CE4EA4BA48D87 /* Pods */,
@@ -206,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69179A112837DB5A0028788D /* file.txt in Resources */,
 				692F185B282D484A000EDEA8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

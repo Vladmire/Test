@@ -8,11 +8,9 @@
 import TinyConstraints
 
 class MainViewController: UIViewController {
-    
-    
-    let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
+
     private let cellID = "customCell"
-    private let data = DataAPI.shared.getData()
+    private let data: [Data] = DataAPI.decodeData()
     private let dataTableView = UITableView()
     
     override func viewDidLoad() {
@@ -31,6 +29,8 @@ class MainViewController: UIViewController {
         dataTableView.estimatedRowHeight = 80.0
         dataTableView.rowHeight = UITableView.automaticDimension
     }
+    
+    
 }
 
 extension MainViewController: UITableViewDataSource {
