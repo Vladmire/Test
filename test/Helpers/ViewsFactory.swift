@@ -8,21 +8,23 @@ import TinyConstraints
 
 struct ViewsFactory {
     
-    
     static func createView() -> UIView {
         let view = UIView()
         return view
     }
+    
     static func createScrollView() -> UIScrollView {
         let scroll = UIScrollView()
         return scroll
     }
+    
     static func createStackView(spacing: CGFloat = 0.0) -> UIStackView {
         let stack = UIStackView()
         stack.alignment = .center
         stack.spacing = spacing
         return stack
     }
+    
     static func createLabel(text: String = "",
                             textColor: UIColor = .black,
                             numberOfLines: Int = 0,
@@ -40,6 +42,7 @@ struct ViewsFactory {
         }
         return label
     }
+    
     static func createButton(title: String = "",
                              image: String = "",
                              titleColor: String = "",
@@ -58,7 +61,8 @@ struct ViewsFactory {
         button.layer.cornerRadius = cornerRadius
         return button
     }
-    static func createImageView(imageName: String = "",
+    
+    static func createImageView(imageName: String = "imageIcon",
                                 cornerRadius: CGFloat) -> UIImageView {
         let image = UIImageView()
         image.clipsToBounds = true

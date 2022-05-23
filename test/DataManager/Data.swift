@@ -11,5 +11,4 @@ struct Data: Decodable {
     let image: String
     let title: String
     let text: String
-
 }
